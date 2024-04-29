@@ -1,9 +1,11 @@
 import React from "react";
-
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 const Page = async () => {
-  const res = await fetch("https://api.thecatapi.com/v1/images/search", { cache: "no-store" });
+  const res = await fetch("https://api.thecatapi.com/v1/images/search");
   const data = await res.json();
   const url: string = data[0]?.url ?? "";
+  console.log("url", url);
   return (
     <>
       <div className="mx-4 my-2 flex items-center justify-between space-x-4">
