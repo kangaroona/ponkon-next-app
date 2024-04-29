@@ -1,3 +1,5 @@
+import { Coutner } from "@/components/client/counter";
+import Card from "@/components/server/Card";
 async function getProjects(): Promise<{ name: string; id: number }[]> {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -22,6 +24,9 @@ export default async function List() {
       {projects.map((o: any) => (
         <div key={o.id}>{o.name}</div>
       ))}
+      <Coutner>
+        <Card title="title" desc="desc" />
+      </Coutner>
     </div>
   );
 }

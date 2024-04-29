@@ -20,7 +20,7 @@ export default async function Home() {
   };
 
   const pokemon = await fetchPokemonArray();
-  console.log({ pokemon });
+  // console.log({ pokemon });
   return (
     <main>
       <h1 style={{ textAlign: "center", margin: "4rem" }}>Pokedex</h1>
